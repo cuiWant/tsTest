@@ -6,14 +6,17 @@
 // console.log(readStrLength, 'readStrLength')
 // console.log(readStrLength2, 'readStrLength2')
 // console.log(readStrLength3)
-// 接口 interface  拦截器interceptor
-function printLabel(data) {
-    console.log(data.label);
-}
-var data = {
-    label: '1',
-    0: "1"
-};
-// data = { label: '1' };
-// data.s = 1
-printLabel(data);
+var Person = /** @class */ (function () {
+    function Person(config) {
+        this.name = config.name;
+        this.sex = config.sex;
+        this.age = config.age;
+    }
+    return Person;
+}());
+var person = new Person({
+    name: 'cui',
+    age: 123,
+    sex: true
+});
+console.log(person, 'person');
